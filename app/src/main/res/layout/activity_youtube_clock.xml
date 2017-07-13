@@ -1,0 +1,58 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:context="com.yyildirim.clocktube.ClockTubeActivity">
+
+        <RelativeLayout
+            android:id="@+id/left_pane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:mcv_arrowColor="@color/grey"
+                app:mcv_dateTextAppearance="@style/CalendarDay"
+                app:mcv_tileHeight="35dp"
+                app:mcv_tileWidth="50dp" />
+
+            <TextClock
+                android:id="@+id/digital_clock_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/calendar_view"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="200sp" />
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/youtube_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/hide_youtube_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/chevron_right"
+        app:backgroundTint="@color/red"
+        app:layout_anchor="@id/left_pane"
+        app:layout_anchorGravity="top|right|end" />
+</android.support.design.widget.CoordinatorLayout>
