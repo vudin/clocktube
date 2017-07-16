@@ -29,7 +29,7 @@ public class ClockTubeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_youtube_clock);
+        setContentView(R.layout.activity_clock_tube);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setImmersiveMode();
         initYouTubeWebView();

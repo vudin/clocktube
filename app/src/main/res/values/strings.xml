@@ -1,8 +1,5 @@
 <resources>
-    <string name="app_name">YouTubeClock</string>
-
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="app_name">ClockTube</string>
     <string name="settings_dialog_text">Please give the permission to change brightness.\nThanks!</string>
     <string name="settings_dialog_ok">OK</string>
 </resources>
