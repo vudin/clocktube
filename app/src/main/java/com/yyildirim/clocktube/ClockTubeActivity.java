@@ -39,7 +39,7 @@ public class ClockTubeActivity extends AppCompatActivity {
     }
 
     private void setupDigitalClock() {
-        TextClock digitalClock = (TextClock) findViewById(R.id.digital_clock_view);
+        TextClock digitalClock = findViewById(R.id.digital_clock_view);
         digitalClock.addTextChangedListener(new DigitalClockTextWatcher());
     }
 
@@ -60,7 +60,7 @@ public class ClockTubeActivity extends AppCompatActivity {
     }
 
     private void initCalendarView() {
-        calendarView = (MaterialCalendarView) findViewById(R.id.calendar_view);
+        calendarView = findViewById(R.id.calendar_view);
         setDateToToday();
         MaterialCalendarView.StateBuilder stateBuilder = calendarView.state().edit();
         stateBuilder.setFirstDayOfWeek(Calendar.MONDAY);
@@ -68,13 +68,13 @@ public class ClockTubeActivity extends AppCompatActivity {
     }
 
     private void initHideYouTubeButton() {
-        hideYouTubeFab = (FloatingActionButton) findViewById(R.id.hide_youtube_fab);
+        hideYouTubeFab = findViewById(R.id.hide_youtube_fab);
         hideYouTubeFab.setOnClickListener(new FabClickListener());
     }
 
     @SuppressLint("SetJavaScriptEnabled")
     private void initYouTubeWebView() {
-        webView = ((WebView) findViewById(R.id.youtube_webview));
+        webView = findViewById(R.id.youtube_webview);
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient());
 
